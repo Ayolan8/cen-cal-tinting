@@ -1,3 +1,7 @@
+const dropdown = document.querySelector('.dropdown');
+const dropdownBtn = document.getElementById("drop-btn");
+let isDropdown = false;
+
 const scrollContainer = document.getElementById('scroll-container');
 const forwardScrollBtn = document.getElementsByClassName('right-arrow');
 const backwardScrollBtn = document.getElementsByClassName('left-arrow');
@@ -8,6 +12,19 @@ const closeAcc = document.getElementsByClassName('close');
 const accordion = document.getElementsByClassName('accordion');
 const questionText = document.querySelectorAll('.question-container p') 
 const questionDiv = document.querySelectorAll('.question');
+
+const toggleDropdown = () => {
+    let body = document.body;
+    isDropdown = !isDropdown;
+
+    if (isDropdown){
+        dropdown.style.display = "flex";
+        body.style.position = "fixed";
+    }else {
+        dropdown.style.display = "none";
+        body.style.position = "relative"
+    }
+}
 
 const openAccordion = () => {
     for (let i = 0; i < openAcc.length; i++){
@@ -51,5 +68,5 @@ Array.from(backwardScrollBtn).forEach(back => {
     });
 })
 
-
+dropdownBtn.addEventListener("click", toggleDropdown);
 openAccordion();
