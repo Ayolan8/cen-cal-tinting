@@ -32,9 +32,10 @@ const openAccordion = () => {
             this.classList.add('hidden');
             closeAcc[i].classList.remove('hidden');
             accordion[i].style.display = 'block';
-            questionText[i].style.color = '#00ADEE'
+            questionText[i].style.color = '#00ADEE';
             // questionDiv[i].style.height = '235px'
-            questionDiv[i].style.height = '150px'
+            questionDiv[i].style.height = '150px';
+            questionText[i].style.backgroundColor = '#00adee36';
         })
     }
 
@@ -46,6 +47,7 @@ const openAccordion = () => {
             accordion[j].style.display = 'none';
             questionText[j].style.color = '#474747';
             questionDiv[j].style.height = '50px';
+            questionText[j].style.backgroundColor = '#fff';
         })
     }
 }
