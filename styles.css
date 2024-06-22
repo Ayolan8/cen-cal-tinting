@@ -1044,6 +1044,14 @@ ul a {
     }
 }
 
+@media screen and (max-width: 1024px) {
+    .perks-section, 
+    .footer-contents{
+        justify-content: center;
+        /* align-items: center; */
+    }
+}
+
 @media screen and (max-width: 912px) {
 
     body{
